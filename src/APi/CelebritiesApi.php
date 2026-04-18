@@ -6,7 +6,12 @@ use ImdbApi\Http\ApiClient;
 
 class CelebritiesApi
 {
-    public function __construct(private ApiClient $client) {}
+    private $client;
+
+    public function __construct(ApiClient $client)
+    {
+        $this->client = $client;
+    }
 
     public function get(string $id): array
     {

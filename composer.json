@@ -14,9 +14,9 @@
       "ImdbApi\\": "src/"
     }
   },
-  "require": {
-    "php": "^8.0",
-    "guzzlehttp/guzzle": "^7.0"
+   "require": {
+    "php": "^7.2",
+    "guzzlehttp/guzzle": "^6.5 || ^7.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^10.0"

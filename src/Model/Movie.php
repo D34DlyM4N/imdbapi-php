@@ -4,22 +4,21 @@ namespace ImdbApi\Model;
 
 class Movie
 {
-    public function __construct(
-        public string $id,
-        public string $title,
-        public ?float $rating = null,
-        public ?string $year = null,
-        public ?string $image = null
-    ) {}
+    public $id;
+    public $title;
+    public $rating;
+    public $year;
+    public $image;
 
-    public static function fromArray(array $data): self
+    public static function fromArray(array $data)
     {
-        return new self(
-            $data['id'] ?? '',
-            $data['title'] ?? '',
-            $data['rating'] ?? null,
-            $data['year'] ?? null,
-            $data['image'] ?? null
-        );
+        $obj = new self();
+        $obj->id = isset($data['id']) ? $data['id'] : '';
+        $obj->title = isset($data['title']) ? $data['title'] : '';
+        $obj->rating = isset($data['rating']) ? $data['rating'] : null;
+        $obj->year = isset($data['year']) ? $data['year'] : null;
+        $obj->image = isset($data['image']) ? $data['image'] : null;
+
+        return $obj;
     }
 }

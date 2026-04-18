@@ -9,24 +9,24 @@ use ImdbApi\Http\ApiClient;
 
 class ImdbApi
 {
-    private ApiClient $client;
+    private $client;
 
-    public function __construct(string $baseUrl = 'https://imdbapi.dev')
+    public function __construct($baseUrl = 'https://imdbapi.dev')
     {
         $this->client = new ApiClient($baseUrl);
     }
 
-    public function movies(): MoviesApi
+    public function movies()
     {
         return new MoviesApi($this->client);
     }
 
-    public function tvShows(): TvShowsApi
+    public function tvShows()
     {
         return new TvShowsApi($this->client);
     }
 
-    public function celebrities(): CelebritiesApi
+    public function celebrities()
     {
         return new CelebritiesApi($this->client);
     }
