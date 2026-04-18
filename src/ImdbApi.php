@@ -2,32 +2,19 @@
 
 namespace ImdbApi;
 
-use ImdbApi\Api\MoviesApi;
-use ImdbApi\Api\TvShowsApi;
-use ImdbApi\Api\CelebritiesApi;
-use ImdbApi\Http\ApiClient;
+use ImdbApi\Api\TitlesApi;
 
 class ImdbApi
 {
     private $client;
 
-    public function __construct($baseUrl = 'https://api.imdbapi.dev')
+    public function __construct()
     {
-        $this->client = new ApiClient($baseUrl);
+        $this->client = new Client();
     }
 
-    public function movies()
+    public function titles()
     {
-        return new MoviesApi($this->client);
-    }
-
-    public function tvShows()
-    {
-        return new TvShowsApi($this->client);
-    }
-
-    public function celebrities()
-    {
-        return new CelebritiesApi($this->client);
+        return new TitlesApi($this->client);
     }
 }
