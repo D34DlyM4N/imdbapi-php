@@ -1,0 +1,26 @@
+{
+  "name": "D34DlyM4N/imdbapi-php",
+  "description": "PHP SDK for IMDbAPI.dev (Unofficial IMDb API)",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["imdb", "movies", "api", "sdk", "tvshows"],
+  "homepage": "https://github.com/D34DlyM4N/imdbapi-php",
+  "support": {
+    "issues": "https://github.com/D34DlyM4N/imdbapi-php/issues",
+    "source": "https://github.com/D34DlyM4N/imdbapi-php"
+  },
+  "autoload": {
+    "psr-4": {
+      "ImdbApi\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
