@@ -11,7 +11,7 @@ class ApiClient
     /** @var Client */
     private $client;
 
-    public function __construct($baseUrl = 'https://imdbapi.dev', $timeout = 10)
+    public function __construct($baseUrl = 'https://api.imdbapi.dev', $timeout = 10)
     {
         $this->client = new Client([
             'base_uri' => rtrim($baseUrl, '/'),

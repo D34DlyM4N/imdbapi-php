@@ -11,7 +11,7 @@ class ImdbApi
 {
     private $client;
 
-    public function __construct($baseUrl = 'https://imdbapi.dev')
+    public function __construct($baseUrl = 'https://api.imdbapi.dev')
     {
         $this->client = new ApiClient($baseUrl);
     }
