@@ -1,7 +1,7 @@
 # IMDbAPI PHP SDK
 
 ## Install
-composer require khalid/imdbapi-php
+composer require D34DlyM4N/imdbapi-php
 
 ## Usage
 ```php
